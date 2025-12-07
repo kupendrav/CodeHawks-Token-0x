@@ -152,6 +152,9 @@ contract ERC20Internals {
             let accountBalanceSlot := keccak256(ptr, 0x40)
             let accountBalance := sload(accountBalanceSlot)
             sstore(accountBalanceSlot, add(accountBalance, value))
+
+            mstore(ptr, value)
+            log3(ptr, 0x20, 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef, 0, account)
         }
     }
 
@@ -176,6 +179,9 @@ contract ERC20Internals {
             let accountBalanceSlot := keccak256(ptr, 0x40)
             let accountBalance := sload(accountBalanceSlot)
             sstore(accountBalanceSlot, sub(accountBalance, value))
+
+            mstore(ptr, value)
+            log3(ptr, 0x20, 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef, account, 0)
         }
     }
 
