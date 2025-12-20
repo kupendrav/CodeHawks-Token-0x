@@ -1,3 +1,15 @@
+<div align="center">
+
+# 🦅 CodeHawks Security Audit
+
+<img src="https://res.cloudinary.com/droqoz7lg/image/upload/v1689080263/snhkgvtsidryjdtx0pce.png" width="200" alt="CodeHawks Logo"/>
+
+### Token-0x Security Audit Contest
+
+</div>
+
+---
+
 # Token-0x
 
 A secure and cost-efficient base ERC20 implementation that follows the ERC20 standard, built with a combination of Solidity and Yul for optimized gas consumption.
@@ -7,6 +19,7 @@ A secure and cost-efficient base ERC20 implementation that follows the ERC20 sta
 ## 📋 Table of Contents
 
 - [About](#about)
+- [Vulnerability Submissions](#vulnerability-submissions)
 - [Contest Details](#contest-details)
 - [Features](#features)
 - [Actors](#actors)
@@ -36,6 +49,34 @@ Token-0x is a secure and cheap base ERC20 implementation that fully complies wit
 Users can utilize Token-0x as a drop-in replacement for other ERC20 implementations like OpenZeppelin, while benefiting from reduced gas costs.
 
 **Repository:** [GitHub](https://github.com/GHexxerBrdv/Token-0x.git)
+
+---
+
+## 🔍 Vulnerability Submissions
+
+This repository contains detailed security vulnerability reports discovered during the CodeHawks audit contest. The findings are organized by severity level:
+
+### 🔴 Critical Vulnerabilities
+- [**Self-Transfer Balance Inflation**](submission_critical_selftransfer.md) - Self-transfers inflate user balance due to stale storage reads
+
+### 🟠 High Severity Vulnerabilities
+- [**Unsafe Assembly Integer Overflow/Underflow**](submission_high.md) - Missing overflow/underflow checks in `_burn`, `_mint`, and `_transfer`
+- [**Integer Overflow in _transfer**](submission_high_2.md) - Additional overflow vulnerabilities in transfer operations
+- [**Infinite Allowance Vulnerability**](submission_high_infinite_allowance.md) - Allowance manipulation leading to unauthorized transfers
+- [**Recipient Balance Overflow**](submission_high_recipient_overflow.md) - Overflow in recipient balance during transfers
+
+### 🟡 Medium Severity Vulnerabilities
+- [**General Medium Severity Issue**](submission_medium.md) - Medium-level security concerns
+- [**Allowance Revert Issue**](submission_medium_allowance_revert.md) - Improper handling of allowance edge cases
+
+### 🟢 Low Severity Vulnerabilities
+- [**General Low Severity Issue**](submission_low.md) - Minor security concerns
+- [**Memory Write Issue**](submission_low_memory_write.md) - Memory handling inefficiencies
+
+### ⚠️ Major Issues
+- [**Major Security Issue**](submission_major.md) - Significant architectural concerns
+
+> **Note**: These vulnerabilities were discovered as part of the CodeHawks security audit contest. Each report includes detailed descriptions, proof of concepts, and recommended mitigations.
 
 ---
 
