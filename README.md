@@ -7,6 +7,7 @@
 ### Token-0x Security Audit Contest
 
 </div>
+<img width="1873" height="921" alt="{2D2B3EBD-9815-4E39-B39A-9119960DECA5}" src="https://github.com/user-attachments/assets/b773f915-46c6-4f82-a255-65b5f880356f" />
 
 ---
 
@@ -192,3 +193,4 @@ No known issues at this time.
 ## License
 
 This project is part of the CodeHawks audit contest.
+
